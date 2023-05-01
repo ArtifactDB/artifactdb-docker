@@ -6,4 +6,4 @@
 	url = git@github.com:ArtifactDB/artifactdb-utils.git
 [submodule "artifactdb-backend"]
 	path = artifactdb-backend
-	url = git@github.com:ArtifactDB/artifactdb-utils.git
+	url = git@github.com:ArtifactDB/artifactdb-backend.git
