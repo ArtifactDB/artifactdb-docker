@@ -1,0 +1,9 @@
+[submodule "artifactdb-identifiers"]
+	path = artifactdb-identifiers
+	url = git@github.com:ArtifactDB/artifactdb-identifiers.git
+[submodule "artifactdb-utils"]
+	path = artifactdb-utils
+	url = git@github.com:ArtifactDB/artifactdb-utils.git
+[submodule "artifactdb-backend"]
+	path = artifactdb-backend
+	url = git@github.com:ArtifactDB/artifactdb-utils.git
