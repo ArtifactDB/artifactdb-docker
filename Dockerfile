@@ -34,7 +34,7 @@ RUN \
 
 # install code for generic API itself
 RUN find lib/src -maxdepth 1 -mindepth 1 -type d -exec ln -s {} \; \
-    && ln -s src/config.py
+    && ln -s lib/src/config.py
 
 WORKDIR /app
 ENV MODULE_NAME rest.main
