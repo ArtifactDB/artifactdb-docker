@@ -11,7 +11,12 @@ BUILD_TAG = $(ADB_GITBRANCH)-$(ADB_GITHASH)
 
 image: .build
 
-image-local: .build
+push:
+	# explicit hash for versioning
+	docker tag \
+      artifactdb:$(BUILD_TAG) \
+      ghcr.io/artifactdb/artifactdb-docker/artifactdb:$(BUILD_TAG)
+	docker push ghcr.io/artifactdb/artifactdb-docker/artifactdb:$(BUILD_TAG)
 
 dev-push:
 	# explicit hash for versioning
