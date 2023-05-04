@@ -21,11 +21,11 @@ RUN \
     && python -m pip install --upgrade pip 'ipython>=8.12.0' awscli==1.18.76 \
     # adb-*, develop mode to keep checked out code as the active version
     && cd /app/lib/artifactdb-identifiers \
-    && python setup.py develop \
+    && pip install -e . \
     && cd /app/lib/artifactdb-utils \
-    && python setup.py develop \
+    && pip install -e . \
     && cd /app/lib/artifactdb-backend \
-    && python setup.py develop \
+    && pip install -e . \
     # uninstall build deps and cache
     && rm -rf /root/.cache/pip \
     && apk del sudo gcc musl-dev linux-headers build-base postgresql-dev \
