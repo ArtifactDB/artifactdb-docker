@@ -32,10 +32,6 @@ RUN \
     # adjust run deps again
     && apk --no-cache add postgresql-libs libmagic
 
-# install code for generic API itself
-RUN find lib/src -maxdepth 1 -mindepth 1 -type d -exec ln -s {} \; \
-    && ln -s lib/src/config.py
-
 WORKDIR /app
 ENV MODULE_NAME rest.main
 ENV PORT 8000
