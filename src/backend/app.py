@@ -12,7 +12,7 @@ from backend.manager import BackendManager
 # Placeholder for event-based tasks
 @task_params(bind=True,name="publish_event",autoretry_for=RETRYABLE_EXCEPTIONS,default_retry_delay=30)
 def publish_event(self, project_id, stage, message, version=None, subject="", use_schema=True):
-    logging.info("publish_event", placeholder)
+    logging.info("publish_event, placeholder")
 
 
 @task_params(bind=True,name="open_log",autoretry_for=RETRYABLE_EXCEPTIONS,default_retry_delay=30)
