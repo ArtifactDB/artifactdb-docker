@@ -1,8 +1,10 @@
 # ArtifactDB Docker
 
-This repo allows to build a docker image that can be used to deploy a instance of ArtifactDB, ie. backend/api.
-The image itself can be used as-is to run a vanilla instance, without any customizations. It can also be used as
-base image for instance requiring custom logic (eg. custom REST API endpoints, custom backend tasks, etc...)
+This repo provides build instructions for a docker image that can be used to deploy a instance of ArtifactDB, ie. backend/api.
+The image itself can be:
+- used as-is to run a vanilla instance, without any customizations. The app/api code used can be found under `src` folder.
+- used as base image for instance requiring custom logic (eg. custom REST API endpoints, custom backend tasks, etc...). Such a customize
+  instance would then provide the equivalent of the `src` folder, overriding eg. manager classes, configuration sections, etc...
 
 
 ### Git submodules
@@ -28,4 +30,4 @@ $ git submodule update --init
 
 ### Building the image
 
-`make image` should do the trick...
+`make image` should do the trick, while `make push` will push the image in the ghcr repo.
